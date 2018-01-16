@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laboratorio 1: Introducción</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<header> 
+		<h1 align="center">Laboratorio 1: Introducción</h1>
+		<h2 align="center">Por: Angélica Güemes</h2>
+	</header>
+	<hr>
+	<nav align="center">
+		<a href="Yo.html">Yo</a> |
+		<a href="Investigacion1.html">Investigacion 1</a> |
+		<a href="HTML5.html">HTML5</a> |
+		<a href="Preguntas.html">Cuestionario</a> |
+		<a href="Bibliografia.html">Bibliografía</a> 
+	</nav>
+	<hr>
+
+	<section id="p1">
+		<p class="pre"><h3>1. ¿Cuál es la diferencia entre Internet y la World Wide Web?</h3></p>
+		<p class="res">La red de amplitud mundial (World wide web) es un sistema de hipertextos y/o hipermedios enlazados y accesibles a través de Internet. La www es el sistema que usamos para ingresar a Internet, es el medio que nos permite visualizar el contenido de Internet, la red de redes. (Informática, 2010)</p>
+	</section>
+
+	<section id="p2">
+		<p class="pre"><h3>2. ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</h3> </p>
+		<p class="res"> El protocolo HTTP permite la transferencia de archivos entre un cliente y un servidor web.</p>
+		<table class="res">
+			<tr>
+				<th scope="col">Comando</th>
+				<th scope="col">Descripción</th>
+			</tr>
+			<tr>
+				<td>GET</td>
+				<td>Solicita el recurso ubicado en la URL especificada.</td>
+			</tr>
+				<td>HEAD</td>
+				<td>Solicita el encabezado del recurso ubicado n la URL específica</td>
+			</tr>
+				<td>POST</td>
+				<td>Envía datos al programa ubicado en la URL especificada para que el recurso en esa URI los maneje.</td>
+			</tr>
+				<td>PUT</td>
+				<td>Envía datos a la URL especificada. Pone un recurso en la dirección especificada en la URL. Exactamente en esa dirección. Si no existe, lo crea, si existe lo reemplaza.</td>
+			</tr>
+				<td>DELETE</td>
+				<td>Borra el recurso ubicado en la URL específicada.</td>
+			</tr>
+				<td>PATCH</td>
+				<td>Realizar una actualización parcial de un recurso de OSLC. (no suprime las propiedades de recurso local que no están incluidas en la petición).</td>
+			</tr>
+		</table>
+		<p class="res">(Blogspot, 2013) y (CCM,2018)</p>
+	</section>
+
+	<section id="p3">
+		<p class="pre"><h3>3. ¿Qué método HTTP se debe utilizar al enviar un formulario HTML como el de la encuesta que constestaste al principio de la actividad? ¿Por qué?</h3> </p>
+		<p class="res">Si existe un cuestionario en una pagina y yo lo contesto y quiero mandar mis respuestas usaría el método POST para mandarlo al servidor y que guarde las respuestas en la base de datos. Sin embargo si tengo un cuestionario que quiero publicar uso el método PUT.</p>
+	</section>
+
+	<section id="p4">
+		<p class="pre"><h3>4. ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</h3></p>
+		<p class="res">GET, ya que es una petición.</p>
+	</section>
+
+	<section id="p5">
+		<p class="pre"><h3>5. Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</h3></p>
+		<p class="res">No, el mensaje del código 200 quiere decir “OK”. Es decir, la solicitud no tuvo problemas se llevo a cabo de forma correcta. (CCM,2018)</p>
+	</section>
+
+	<section id="p6">
+		<p class="pre"><h3>6. ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</h3></p>
+		<p class="res">El error 404 indica que no se encontró la página. Eso quiere decir que el servidor no encontró la página solicitada. Así que, a menos que el usuario haya ingresado mal la URL, es error del desarrollador. La causa es que esa pagina se dio de baja del servidor sin dejar alguna para redireccionarla. (CCM, 2018)</p>
+	</section>
+
+	<section id="p7">
+		<p class="pre"><h3>7. ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</h3></p>
+		<p class="res">El error 500 indica un error interno del servidor, por eso mismo el usuario no es responsable. La causa puede ser muchísimas razones, una puede ser error en la programación.(CCM, 2018)</p>
+	</section>
+
+	<section id="p8">
+		<p class="pre"><h3>8. ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</h3></p>
+		<p class="res">Significa que algunos atributos no deben ser usados puesto que es mejor hacer dicha función desde el CSS. (Tutorialspoint, 2017)</p>
+		<table class="res">
+			<tr>
+				<th scope="col">Elemento</th>
+				<th scope="col">Descripción</th>
+			</tr>
+			<tr>
+				<td>&lt;center></td>
+				<td>Pone el texto en el centro</td>
+			</tr>
+			<tr>
+				<td>&lt;u> </td>
+				<td>Subraya el texto</td>
+			</tr>
+			<tr>
+				<td>&lt;dir></td>
+				<td>Define una lista de directorio</td>
+			</tr>
+			<tr>
+				<td>&lt;frame></td>
+				<td>Define un marco</td>
+			</tr>
+		</table>
+	</section>
+
+	<section id="p9">
+		<p class="pre"><h3>9. ¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</h3></p>
+		<p class="res">HTML4: Fue lanzado en 1997 Hay elementos que se pueden usar, pero ya no se recomiendan usar ya que se puede lograr usando CSS. Y dichos elementos ya no se usan en HTML5 <br>
+		HTML5: Introduce nuevos elementos que nos permiten dividir más fácilmente la página por secciones. <br>
+		En lugar de &lt;div id= header>
+		Usa &lt;header>
+		</p>
+	</section>
+
+		<section id="p10">
+		<p class="pre"><h3>10. ¿Qué componentes de estructura y estilo tiene una tabla?</h3></p>
+		<dl class="res">
+			<dt>De estructura</dt>
+			<dd>&lt;table> crea la table</dd>
+			<dd>&lt;tr> crea una fila, table row</dd>
+			<dd>&lt;td> inserta el dato en la celda, table data</dd>
+			<dd>&lt;th> igual que < td >, solo que este th indica el titulo, table header</dd>
+			<dt>Para tablas muy largas</dt>
+			<dd>&lt;thead> para poner los headings</dd>
+			<dd>&lt;tbody> para los datos</dd>
+			<dd>&lt;tfoot> para la última fila</dd>
+			<dd> *Thead y tfoot se mantienen visibles y tbody puedes scrollear para ver todos los datos.</dd>
+			<dt>De estilo</dt>
+			<dd>background-color: </dd>
+			<dd>letter-spacing:</dd>
+			<dd>text-align:</dd>
+		</dl>
+	</section>
+
+		<section id="p11">
+		<p class="pre"><h3>11. ¿Cuáles son los principales controles de una forma HTML5?</h3></p>
+		<ul class="res">
+			<li>Cuadro de texto</li>
+			<li>Cuadro de contraseña</li>
+			<li>Checkbox</li>
+			<li>Radiobutton</li>
+			<li>Botón de envío de formulario</li>
+			<li>Botón de imagen</li>
+			<li>Botón</li>
+		</ul>
+
+		<section id="p12">
+		<p class="pre"><h3>12. ¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</h3></p>
+		<p class="res"> 517 de 555. <br> Navegador Chrome Versión 63.0.3239.132 </p>
+
+	</section>
+
+	<footer>15 Enero 2017, Sublime Text</footer>
+</body>
+</html>
