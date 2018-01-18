@@ -1,0 +1,19 @@
+body{
+	width: 60%;
+	margin-left : auto;
+	margin-right : auto;
+	padding : 30px;
+	text-align: justify;
+	background-image: url("../imagenes/arena1.png");
+}
+html{
+	background-image: url("../imagenes/agua.jpg");
+}
+h1{
+	text-align: center;
+}
+footer{ text-align: right; }
+.res, h3, footer{
+	font-size: 20px;
+	text-decoration-color: pink;
+}

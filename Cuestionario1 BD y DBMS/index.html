@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BD vs DBMS</title>
+	<link rel="stylesheet" type="text/css" href="estilos/index.css">
+</head>
+<body>
+	<header>
+		<h1>Cuestionario 1: BD vs DBMS</h1>
+		<h1>Por Angélica Güemes Estrada</h1>
+	</header>
+
+	<section id="preguntas">
+		<div id="p1">
+			<h3>1. ¿Qué es entonces una base de datos - DB? </h3>
+			<p class="res">Es un conjunto de archivos relacionados lógicamente. Dentro de estas se encuentran muchos datos los cuales al momento de interpretarlos se vuelven información y nos ayudan a hacer una toma de decisiones. </p>
+		</div>
+		<div id="p2">
+			<h3>2. ¿En qué casos es conveniente usar bases de datos?</h3>
+			<ul class="res">
+				<li>Cuando se tiene una gran cantidad de datos que necesitan ser almacenados en algún lugar. </li>
+				<li>Cuando no sólo se necesitan almacenar sino que consultar ciertos conjuntos de datos para toma de decisiones.  </li>
+				<li>Cuando van a seguir recibiendo muchos datos, por ejemplo un distribuidor, que tiene que estar modificando sus datos continuamente.</li>
+			</ul>
+			<p class="res">Algunos lugares interesados en tener BD sería: Fábricas, tiendas, escuelas, distribuidores...</p>
+		</div>
+		<div id="p3">
+			<h3>3. ¿Qué es un sistema de gestión de base de datos - DBMS?</h3>
+			<p class="res">“Es un módulo de programa que proporciona el interfaz entre los datos de bajo nivel almacenados en la base de datos y los programas de aplicación y consultas hechos al sistema. ” [1] <br> Data Base Management System es un software que tiene una colección de datos y se encarga de gestionar estos grandes bloques de información. EL DBMS nos permite acceder a los datos, proporcionando un ambiente óptimo para la gestión, almacenamiento y consulta de estos datos. Algunos ejemplos son: MySQL, SQLServer, Axes (de microsoft).</p>
+		</div>
+		<div id="p4">
+			<h3>4. Enlista y explica las funciones/responsabilidades que tienen los DBMS. </h3>
+			<ol type="I" start="1" class="res">
+				<li>Simplificar y facilitar el acceso a los datos.</li>
+				<li>Tener un tiempo de respuesta mínimo.</li>
+				<li>Centralizar la información.</li>
+				<li>“Acceder a los datos por medio de diversos programas de aplicación diferentes que no han sido previamente coordinados”[1] Es el ejemplo del banco, no deben de poder actualizar la BD en el mismo instante.</li>
+				<li>Segura. Que haya jerarquía, es decir, que no todos los usuarios tengan acceso a todos los datos, sólo a los que necesitan.</li>
+				<li>Confiable</li>
+				<li>Traducir sentencias DML a comandos del sistema de archivos de bajo nivel[1].</li>
+			</ol>
+		</div>
+		<div id="p5">
+			<h3>5. Ejemplifica y justifica en que proyecto de los que has realizado hubiera sido conveniente utilizar una base de datos.</h3>
+			<p class="res">El semestre pasado realicé una APP en Android Studio para una cliente que quería hacer una app prototipo para mostrarla en una junta de negocios. En una parte de la APP se desplegaba un catalogo, en el que el usuario tenía que escoger los muebles de una casa. Primero los sillones, las sillas, las mesas, las camas, y más. Tuvimos que en cada intent poner los muebles que correspondian y hubiera sido mejor tener esa información en una base da datos y simplemente jalar los datos (como leer un archivo). Nos hubiera ahorrado tiempo y además si la app no fuera prototipo se necesitaría agregar la BD, pues los muebles van a ir cambiando con el tiempo, puede eliminar unos o agregar otros. </p>
+		</div>
+		<div id="funtes">
+			<h3>Fuentes</h3>
+			<ul class="res">
+				<li>[1]https://miscursos.tec.mx/bbcswebdav/pid-8193681-dt-content-rid-27665457_1/courses/QRO.TC2026.2.1811.20480/lectura1_DBvsDBMS.html</li>
+				<li>[2] Chardi García, SQL Fácil, 383 ,2014</li>
+			</ul>
+		</div>
+	</section>
+	
+</body>
+	
+	<footer>18 Enero 2018, Sublime Text</footer>
+
+</body>
+</html>
