@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	<title>Laboratorio 1 &amp 3: CSS</title>
+<html>
+<head> 3: Introducción</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<h1 align="center">Laboratorio 1 &amp 3: CSS</h1>
+	<h2 align="center">Por: Angélica Güemes</h2>
+	<hr>
+	<nav align="center">
+		<a href="Yo.html">Yo</a> |
+		<a href="Investigacion1.html">Investigacion 1</a> |
+		<a href="HTML5.html">HTML5</a> |
+		<a href="Preguntas.html">Cuestionario</a> |
+		<a href="Bibliografia.html">Bibliografía</a> | 
+		<a href="Css.html">Cuestionario CSS</a> 
+	</nav>
+	<hr>
+	<section id="p1">
+		<p class="pre"><h3>1. Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS? </h3></p>
+		<p class="res">No tenía conocimientos de la declaración !important. Sin embargo al indagar más sobre ella me di cuenta que es muy util. Muchas veces me pasaba que quería ponerle estilo a alguna clase o id que coincidía con los estilos que le quería aplicar a otros elementos pero tenia que hacer una declaración para cada una por ciertos estilos que no coinciden. Y con esta declaración puedo manejar o modificar de cierta forma el grado de importancia de las declaraciones dentro de las llaves. El tener la libertad de declarar como importante algún valor de una propiedad es muy ventajoso.</p>
+	</section>
+	<section id="p2">
+		<p class="pre"><h3>2. Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</h3></p>
+		<p class="res">Por cuestión estética, porque va a ser lo que el usuario vea en el sitio. Por cuestión funcional es un poco mas complicado. Se deben de tomar en cuenta muchas cosas, como por ejemplo el tamaño y la calidad de la imagen. Debe haber un balance para que se pueda apreciar bien la imagen, pero que tampoco sea tan pesada como para que demore en cargar mucho el sitio. Si no se modifica el tamaño de la imagen al momento de cargar es más rápido que cuando se quiere reajustar el tamaño. También, si se pone de fondo una imagen que no abarca el tamaño de la pantalla, por default se va a repetir hasta llenarla. Eso va a hacer que tarde más en cargar el sitio.</p>
+	</section>
+	<section id="p3">
+		<p class="pre"><h3>3. Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</h3></p>
+		<p class="res">Los pixeles son relativos a la resolución de la pantalla, así que el mismo type size se verá más grande en una pantalla de 800x600 que en una de 1280x800.
+		Pt (points) los recomiendo usar cuando realices algo que va a terminar siendo impreso. 
+		Cuando a las etiquetas del html (body, footer, div) le pones tamaño con % creas un liquid layout, es decir si haces más pequeña la pantalla tos elementos se siguen viendo pero se comprimen al % de la pantalla. Si los especificas con px crearan un fixed layout donde si haces la pantalla pequeña los elementos que no quepan se dejaran de ver. Así que depende de lo que quieras hacer.
+		</p>
+	</section>
+		<section id="p4">
+		<p class="pre"><h3>4. ¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</h3></p>
+		<p class="res">Porque el CSS lo codificamos de forma que se vea estructurado, legible y fácil de entender para las personas. Pero el poner comentarios y demás no le importa al navegador, sino que necesita más tiempo para leer el archivo. Comprimir el .css hace que se cargue más rapido el archivo y por consiguiente la pagina. De hecho se recomienda que el archivo .css no sea más pesado de 100kb.
+		</p>
+	</section>
+
+</body>
+
+	<footer>15 Enero 2017, Sublime Text</footer>
+</html>
+
