@@ -1,40 +1,29 @@
-* {
-    border-color: red;
-}
-html {
-    background-image: url(../imagenes/flores2.jpeg);
-}
+
+html { background-image: url(../imagenes/flores2.jpeg);}
+
 body {
-    width: 960px;
-    margin: auto;
-    padding: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
     background-color: #fff;
 }
-#bodBiblio {
-    height: 1005px;
-}
-footer {
-    float: right;
-}
-.col1, .col2, .col3 {
+footer {float: right;}
+.col1, .col2, .col3, .col4, .col5{
     width: 300px;
     float: left;
-    margin: 50px 10px 10px;
     text-align: center;
     background-color: #c0c4a2;
 }
-#erroresHTTP {
-    font-size: 22px;
-}
-#bod1 {
-    background-color: #fff;
-}
-table {
-    width: 600px;
-}
-#tableEtapas {
-    width: 900px;
-}
+#html1, #html3, #html5, #html7,#html9 { margin: 70px 60px 15px 40px; /*top, right bottom left */ }
+#html2, #html4, #html6, #html8, #html10{ margin: 70px 0px 15px 10px; /*top, right bottom left*/ }
+.projects-button{background-color: #836285;margin-left: 20%; margin-right: 20%; 
+    padding-top: 5%; padding-bottom: 5%; color: #c0c4a2;}
+.projects{margin-left: 20px; margin-right: 20px;}
+#erroresHTTP {font-size: 22px;}
+#bod1 { background-color: #fff;}
+table {width: 600px;}
+#tableEtapas {width: 600px;}
 table, td, th, tr {
     border: 1px solid #000;
     text-align: center;
@@ -43,12 +32,14 @@ p {
     text-align: justify;
     text-justify: inter-word;
 }
-.b {
-    text-align: center;
-    width: 600px;
-    margin-left: 180px;
-}
+.b {text-align: center;}
 #auri {
     margin-left: 15px;
     margin-top: 6px;
 }
+footer#biblio{ 
+    
+     bottom: 15px;
+     right:20%;
+     float: right;
+     }
