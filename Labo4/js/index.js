@@ -1,3 +1,16 @@
+var texto= prompt("Ingresa un número");
+
+var res= new Array(texto);
+for (var i = 0; i <texto; i++) {
+	res[i]=i+1;
+}
+
+var primera;
+primera = document.getElementById('1');
+
+primera.textContent= res;
+
+
 /*
 ESTOY EN DEVELOP
 

@@ -18,6 +18,148 @@
 		<a href="labo4.html">Labo 4: JS</a> 
 	</nav>
 	<hr>
+
+<section>
+	<h2>Funciones JavaScript</h2>
+	<div id="1">
+		
+	</div>
+</section>
+
+<section>
+	<h2>Preguntas</h2>
+	<div id="p1">
+		<p class="pre"><h3>1. ¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h3></p>
+		<p class="res">JavaScript está escrito en texto plano (al igual que html y css). 
+		Java es un lenguaje de programación multiplataforma. 
+		Tanto Java como JavaScript  cuenta con diversos frameworks, como prototype, jquey, moo, etc. El manejo de objetos es una similitud entre los dos mientras que el lenguaje es completamente distintos, muchas excepciones dentro del lenguaje Java son permitidas en JavaScript, como guardar distintos tipos de datos dentro de un arreglo.
+		Java puede correr en una maquina virtual o en un buscador, y javascript corre en un buscador.</p>
+	</div>
+	<div id="p2">
+		<p class="pre"><h3>2. ¿Qué métodos tiene el objeto Date?</h3></p>
+		<p class="res">
+			&lt;script> <br>
+			var d = new Date(); <br>
+			document.getElementById("demo").innerHTML = d.getTime(); <br>
+			&lt;/script> <br>
+			<table>
+				<tr>
+					<th>Método</th>
+					<th>Descripción</th>
+				</tr>
+				<tr>
+					<td>getDate()</td>
+					<td>Obtiene el día como númuero (1-31)</td>
+				</tr>
+				<tr>
+					<td>getDay()</td>
+					<td>Obtiene el día de la semanacomo número (0-6)</td>
+				</tr>
+				<tr>
+					<td>getFullYear()</td>
+					<td>Obtiene el año actual (yyyy)</td>
+				</tr>
+				<tr>
+					<td>getHours()</td>
+					<td>Obtiene la hora actual (0-23)</td>
+				</tr>
+				<tr>
+					<td>getMilliseconds()</td>
+					<td>Obtiene los milisegundos actuales (0-999)</td>
+				</tr>
+				<tr>
+					<td>getMinutes()</td>
+					<td>Obtiene el minuto actual (0-59)</td>
+				</tr>
+				<tr>
+					<td>getMonth()</td>
+					<td>Obtiene el mes actual (0-11)</td>
+				</tr>
+				<tr>
+					<td>getSeconds()</td>
+					<td>Obtiene los segundos actuales (0-59)</td>
+				</tr>
+				<tr>
+					<td>getTime()</td>
+					<td>Obtiene el tiempo transcurrido desde Enero 1 1970</td>
+				</tr>
+			</table>
+		</p>
+	</div>
+	<div id="p3">
+		<p class="pre"><h3>3. ¿Qué métodos tienen los arreglos? </h3></p>
+		<p class="res">
+			var fruits = ["index0", "index1", "index2", "index3"]; <br>
+			document.getElementById("demo").innerHTML = fruits.toString(); <br>
+			<table>
+				<tr>
+					<th>Método</th>
+					<th>Descripción</th>
+				</tr>
+				<tr>
+					<td>.toString()</td>
+					<td>Convierte un arreglo a un string de valores de arreglos separados por una coma.</td>
+				</tr>
+				<tr>
+					<td>.join()</td>
+					<td>Une los elementos del arreglo en un string. Además puedes especificar el separador. Ejemplo: fruits.join(" * ");</td>
+				</tr>
+				<tr>
+					<td>.pop()</td>
+					<td>Elimina el último elemento del arreglo</td>
+				</tr>
+				<tr>
+					<td>.push()</td>
+					<td>Añade un elemento al arreglo en la última posición.</td>
+				</tr>
+				<tr>
+					<td>.shift()</td>
+					<td>Elimina el primer elemento del arreglo y desplaza todos una posición a la izquierda. Regresa el elemento eliminado.</td>
+				</tr>
+				<tr>
+					<td>.unshift()</td>
+					<td>Añade un elemento al inicio del array y recorre todos a la derecha. Regresa el numero de elementos.</td>
+				</tr>
+				<tr>
+					<td>.concat()</td>
+					<td>Concatena dos arreglos. Ejemplo: arreglo3= arreglo1.concat(arreglo2)</td>
+				</tr>
+			</table>
+		</p>
+	</div>
+	<div id="p4">
+		<p class="pre"><h3>4. ¿Cómo se declara una variable con alcance local dentro de una función?</h3></p>
+		<p class="res">Con let. La palabra reservada let hace que la variable solo sea conocida dentro del límite de los “{...}”</p>
+	</div>
+	<div id="p5">
+		<p class="pre"><h3>5. ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</h3></p>
+		<p class="res">Cuando se usan variables locales dentro de una función es eficiente ya que la variable solo existe cuando se llama la funcion, no en otro momento. Haciendo el programa no sólo más legible sino más rápido y “No nos condiciona en muchos casos que el programa sólo sirva para un conjunto de casos determinados.”[3]</p>
+	</div>
+	<div id="p6">
+		<p class="pre"><h3>6. ¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué podrías utilizar esto en una aplicación web?</h3></p>
+		<p class="res">Las expresiones regulares son patrones utilizados para encontrar una determinada combinación de caracteres dentro de una cadena de texto. En JavaScript, las expresiones regulares también son objetos. [4] <br>
+		Los patrones de string que hacen uso de las expresiones regulares son: <br>
+		<ul>
+			<li>Match</li>
+			<li>Replace</li>
+			<li>Search</li>
+			<li>Split</li>
+		</ul> 
+		var reEx = /hola/i (i de insensitive) <br>
+		var reEx = new RegExp(‘hola’) <br>
+		Caso de uso en APP Web: Si tengo una tienda de grabado de pulseras, puedo poner la imagen de una pulsera con el nombre “ejemplo”, el usuario ingresa su nombre y se reemplaza “ejemplo” con el nombre del usuario así puede ver cómo se vería si lo pidiera.
+		</p>
+	</div>
+</section>
+
+<section>
+	<h2>Bibliografía</h2>
+	<p>[1] https://www.java.com/en/download/faq/java_javascript.xml</p>
+	<p>[2] https://www.w3schools.com/js/js_array_methods.asp</p>
+	<p>[3] http://decsai.ugr.es/~jfv/ed1/c/cdrom/cap6/cap62.htm</p>
+	<p>[4] https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions</p>
+</section>
+<script src='js/index.js'></script>
 </body>
 <footer id="biblio">22 Enero 2018, Sublime Text</footer>
 </html>
