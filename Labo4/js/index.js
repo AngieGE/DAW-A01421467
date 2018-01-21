@@ -1,4 +1,6 @@
 /*
+ESTOY EN DEVELOP
+
 <scrypt type
 
 Es un lenguaje no tipado. (Podemos estar trabajando con un dato y despues decirle si es int, float, string..)
