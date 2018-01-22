@@ -1,9 +1,9 @@
-tabla();
-/*suma("2");
-contador("3");
-promedios("4");
-inversa("5");
-problema("6");*/
+//tabla();
+//suma();sionó
+//contador();
+//promedios();
+inversa();
+//problema();
 
 function tabla(){  					/*ENTRADA 1*/
 	var texto = prompt("Ingresa un número");
@@ -25,8 +25,8 @@ function tabla(){  					/*ENTRADA 1*/
 	}
 }
 
-function suma(pIdentificador){
-	var Identificador=pIdentificador;
+function suma(){
+	var Identificador= document.getElementById('2');
 	var a = Math.floor((Math.random() * 100) + 1);
 	var b = Math.floor((Math.random() * 100) + 1);
 	texto = prompt("Suma " + a + " + "+b);
@@ -36,14 +36,62 @@ function suma(pIdentificador){
 	}else{
 		res = 'Incorrecto. La suma de '+ a + ' + '+ b + ' = '+ suma;
 	}
-	var pIdentificador = document.getElementById(pIdentificador);
-	Identificador.textContent= res;
+	Identificador.innerHTML = res;
 }
 
-function contador(pIdentificador){}
-function promedios(pIdentificador){}
-function inversa(pIdentificador){}
-function problema(pIdentificador){}
+function contador(){
+	console.log("entro a contador");
+	var Identificador= document.getElementById('3');
+	var texto= '<br>';
+	document.getElementById('btn1').onclick = function(){
+		console.log("presionó submit");
+		var max = document.getElementById('tamanoArreglo').value;
+		console.log("valor max: "+ max);
+		for (var i = 0; i < max; i++) { //Que se escrivan max inputs para que ingrese los numeros
+		Identificador.innerHTML = Identificador.innerHTML.concat('<input type="number" name="quantity " ' + 'id="numeros' +i+'"> <br>');
+		console.log(Identificador.innerHTML);
+		}
+		
+	}
+	document.getElementById('btn2').onclick = function(){
+		console.log("presionó ver Resultados");
+		var max = document.getElementById('tamanoArreglo').value;
+		console.log("valor max: "+ max);
+		var neg=0, pos=0, cero=0;
+		for (var i = 0; i < max; i++) { //Que se escrivan max inputs para que ingrese los numeros
+			if (document.getElementById('numeros'+i) < 0) {
+				neg=neg+1;
+			}else if(document.getElementById('numeros'+i) > 0){
+				pos=pos+1;
+			}else{
+				cero=cero+1;
+			}
+		}
+		console.log("neg: "+ neg +"pos: "+ pos+ "cero: "+ cero);
+		var res= document.getElementById('pos');
+		res.innerHTML=pos;
+		res= document.getElementById('neg');
+		res.innerHTML=neg;
+		res= document.getElementById('cero');
+		res.innerHTML=cero;
+		
+	}
+}
+
+function promedios(){
+
+}
+
+function inversa(){
+	var numero = document.getElementById('numerof3');
+	for (var i = 0; i < range.length; i++) {
+	var n = range[i];   
+	}
+}
+
+function problema(){
+
+}
 
 /*
 ESTOY EN DEVELOP
