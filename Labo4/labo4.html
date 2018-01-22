@@ -23,6 +23,7 @@
 	<h2>Funciones JavaScript</h2>
 	<div id="1">
 		<h3>Entrada 1: </h3>
+		<input type="button" value="Iniciar" id="btn0" onclick="verTabla()"> <br><br>
 		<table>
 			<tr>
 				<th>Numerados</th>
@@ -39,16 +40,17 @@
 			</tr>
 		</table>
 	</div>
-		<div>
+	<div>
 		<h3>Entrada 2: </h3>
+		<input type="button" value="Iniciar" id="btn0.1" onclick="verSuma()"> <br><br>
 		<p id="2"></p>
 	</div>
 	<div>
-		<h3>Función 1: *No me sale :( * </h3>
+		<h3>Función 1: </h3>
 		<form>
 			Ingresa el tamaño del arreglo:
-  			<input type="number" name="quantity" min="1" max="10" id="tamanoArreglo">
-  			<input type="button" value="Submit" id="btn1">
+  			<input type="number" name="quantity" min="1" max="10" id="tamanoArreglo" value="1">
+  			<input type="button" value="Submit" id="btn1" onclick="verContador()">
 		</form>
 		<p id="3"></p>
 		<input type="button" value="Ver resultado" id="btn2">
@@ -60,16 +62,74 @@
 	</div>
 	<div>
 		<h3>Función 2: </h3>
-		<p id="4"></p>
+		<p id="4">
+			<table>
+			<tr>
+				<th>Alumnos</th>
+				<th>Calificación 1  </th>
+				<th>Calificación 2</th>
+				<th>Calificación 3</th>
+				<th>Promedio</th>
+			</tr>
+			<tr>
+				<th>Alumno 1</th>
+				<td> <input type="number" name="quantity" min="0" max="100" id="a1c1" value="0"></td>
+				<td> <input type="number" name="quantity" min="0" max="100" id="a1c2" value="0"></td>
+				<td> <input type="number" name="quantity" min="0" max="100" id="a1c3" value="0"></td>
+				<td id="a1p"></td>
+			</tr>
+			<tr>
+				<th>Alumno 2</th>
+				<td> <input type="number" name="quantity" min="0" max="100" id="a2c1" value="0"></td>
+				<td> <input type="number" name="quantity" min="0" max="100" id="a2c2" value="0"></td>
+				<td> <input type="number" name="quantity" min="0" max="100" id="a2c3" value="0"></td>
+				<td id="a2p"></td>
+			</tr>
+			<tr>
+				<th>Alumno 3</th>
+				<td> <input type="number" name="quantity" min="0" max="100" id="a3c1" value="0"></td>
+				<td> <input type="number" name="quantity" min="0" max="100" id="a3c2" value="0"></td>
+				<td> <input type="number" name="quantity" min="0" max="100" id="a3c3" value="0"></td>
+				<td id="a3p"></td>
+			</tr>
+			</table>
+			<br>
+			<input type="button" value="Ver promedios" id="btn4" onclick="VerPromedios()">
+		</p>
 	</div>
 	<div>
 		<h3>Función 3: </h3>
-		Escribe un numero con del 10 al 1000: <input type="number" name="quantity" min="10" max="1000" id="numerof3">
+		Escribe un numero del 10 al 1000: <input type="number" name="quantity" min="10" max="1000" id="numerof3" value="10">
+		<input type="button" value="Submit" id="btn3" onclick="verInversa()">
 		<p id="5"></p>
 	</div>
 	<div>
 		<h3>Solución 1: </h3>
-		<p id="6"></p>
+		<p>Alice and Bob each created one problem for HackerRank. A reviewer rates the two challenges, awarding points on a scale from  to  for three categories: problem clarity, originality, and difficulty. <br> We define the rating for Alice's challenge to be the triplet , and the rating for Bob's challenge to be the triplet . <br> Your task is to find their comparison points by comparing  with ,  with , and  with . <br> If , then Alice is awarded  point. <br> If , then Bob is awarded  point. <br> If , then neither person receives a point. <br> Comparison points is the total points a person earned. <br>Given  and , can you compare the two challenges and print their respective comparison points? <br><strong>Input Format</strong> <br>The first line contains  space-separated integers, , , and , describing the respective values in triplet . <br> The second line contains  space-separated integers, , , and , describing the respective values in triplet .<br> <strong>Constraints</strong>  <br> 1<= ai <=100 <br> 1<= bi <=100 <br> <strong>Output Format</strong>  <br>Print two space-separated integers denoting the respective comparison points earned by Alice and Bob</p>
+		<table>
+			<tr>
+				<th>Concursante</th>
+				<th>Pts. Ronda 1  </th>
+				<th>Pts. Ronda 2</th>
+				<th>Pts. Ronda 3</th>
+			</tr>
+			<tr>
+				<th>Alice</th>
+				<td> <input type="number" name="quantity" min="1" max="100" id="a0" value="1"></td>
+				<td> <input type="number" name="quantity" min="1" max="100" id="a1" value="1"></td>
+				<td> <input type="number" name="quantity" min="1" max="100" id="a2" value="1"></td>
+			</tr>
+			<tr>
+				<th>Bob</th>
+				<td> <input type="number" name="quantity" min="1" max="100" id="b0" value="1"></td>
+				<td> <input type="number" name="quantity" min="1" max="100" id="b1" value="1"></td>
+				<td> <input type="number" name="quantity" min="1" max="100" id="b2" value="1"></td>
+			</tr>
+			</table>
+			<br> <br>
+			<input type="button" value="Submit" id="btn5" onclick="verProblema()">
+		<p> Puntos Bob: <element id="bob"></element></p>
+		<p> Puntos Alice: <element id="alice"></element></p>
 	</div>
 </section>
 
