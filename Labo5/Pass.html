@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laboratorio 5</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<h1 align="center">Laboratorio 5: Programación Orientada a Eventos</h1>
+	<h2 align="center">Por: Angélica Güemes</h2>
+	<hr>
+	<nav align="center">
+		<a href="Pass.html">Verificar Password</a> |
+		<a href="shop.html">Shopping</a> |
+		<a href="Form.html">Firma la petición</a> |
+		<a href="index.html">Home</a> 
+	</nav>
+	<hr>
+	<br> <br> <br>
+	<form>
+		<label for="contraseña">Contraseña </label>
+		<input type="password" id="contraseña" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe cumplir con los parametros mencionados en Nota" required> <!--Required: para que si le da aceptar sn haberlo llenado no lo deje-->
+		<br>
+		<input type="submit" value="Aceptar" onclick="verificar()">
+		<br> <br>
+		<p><strong>Nota:</strong> La contraseña debe contener por lo menos: </p>
+		<p id="numero" class="mala"> Un número</p> 
+		<p id="mayuscula" class="mala">Una letra mayuscula</p>
+		<p id="minuscula" class="mala">Una letra minuscula</p> 
+		<p id="minCar" class="mala">Por lo menos 8 caracteres</p> 
+	</form>
+	
+	<h2> <strong>Preguntas</strong></h2> 
+
+	<h3>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</h3>
+ 	<p>Validar que un usuario ingrese información correcta en los campos de un form antes de ser enviados al servidor es una muy buena práctica. Ayuda a que los datos que lleguen a él tengan mayor probabilidad de ser correctos puesto que se validó previamente que no estuvieran llenos con unicamente espacios o un correo sin “@” por ejemplo. Todo esto ayuda en la eficiencia, pues previene que el usuario envíe información errónea de antemano. </p>
+
+	<h3>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</h3>
+ 	<p>...</p>
+
+ 	<h3>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</h3>
+ 	<p>...</p>
+
+ 	<h2> <strong>Fuentes</strong></h2>
+ 	<p>[1] http://michelletorres.mx/validar-formularios-con-javascript/</p>
+	<script src='js/index.js'></script>
+</body>
+</html>

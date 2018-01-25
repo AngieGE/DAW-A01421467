@@ -1,0 +1,21 @@
+body{
+	width:960px;
+	margin:auto;
+	padding:20px;
+	background-color: white;
+}
+html{
+	background: url("imagenes/fondo.png");
+}
+.buena{
+	color: green;
+	font-weight: bold;
+}
+.des{
+	grid-auto-columns: auto;
+	margin-left: 15px;
+}
+div.art{
+	margin-bottom: 20px;
+	margin-top: : 20px;
+}
