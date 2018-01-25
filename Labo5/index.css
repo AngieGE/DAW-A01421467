@@ -19,3 +19,8 @@ div.art{
 	margin-bottom: 20px;
 	margin-top: : 20px;
 }
+img.art{
+	width: 200px;
+}
+#parrafo{text-align: justify;}
+#panda{margin-right: 10px;}

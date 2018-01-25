@@ -69,3 +69,5 @@ entrada.onkeyup = function LeeEntrada() {
  		alert("Gracias");
  	}
  }
+
+ 

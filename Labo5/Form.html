@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laboratorio 5</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<h1 align="center">Laboratorio 5: Programación Orientada a Eventos</h1>
+	<h2 align="center">Por: Angélica Güemes</h2>
+	<hr>
+	<nav align="center">
+		<a href="Pass.html">Verificar Password</a> |
+		<a href="shop.html">Shopping</a> |
+		<a href="Form.html">Firma la petición</a> |
+		<a href="index.html">Home</a> 
+	</nav>
+	<hr>
+	<p id="parrafo"> <img src="imagenes/panda.jpg" width="300px" align="left" id="panda">
+		En un reporte publicado el domingo, la Unión Internacional por la Conservación de la Naturaleza clasificó al panda como “vulnerable” en lugar de “amenazado”, reflejando el aumento de los ejemplares que viven en libertad en el sur de China. La población de pandas salvajes pasó a 1.864 en 2014 desde los 1.596 en 2004, como resultado del trabajo de agencias chinas contra los furtivos y para ampliar las reservas forestales. <br>
+		La población de pandas aumentó un 17% entre 2004 y 2014, gracias a agresivos esfuerzos de conservación, indicó una ONG. Sin embargo, la especie aún se encuentra "vulnerable". <br>
+		El reporte advirtió que si bien mejorar la protección de los bosques ha ayudado a aumentar el número de pandas, se espera que el cambio climático destruya más del 35% de su hábitat actual de bosques de bambú en los próximos 80 años, lo que podrí­a provocar otro declive.
+
+		Pese a todo, grupos ecologistas celebraron la recuperación de este oso consumidor de bambú, que es desde hace décadas un sí­mbolo de China y del movimiento conservacionista global.
+
+		La población de pandas alcanzó un mí­nimo estimado de menos de mil en la década de 1980 debido a la caza furtiva y la deforestación, hasta que Beijing se comprometió con conservar este animal. El gobierno chino ha enviado pandas a zoológicos de todo el mundo como un gesto diplomático de buena voluntad.
+
+		Beijing y el Fondo Mundial de la Naturaleza (WWF, por sus siglas en inglés) establecieron la Reserva Natural Nacional de Wolong, en la provincia de Sichuán, en 1980. La población de pandas se ha recuperado poco a poco, mientras China perseguí­a el tráfico de pieles y ampliaba de forma gradual sus zonas de bosque protegidas, que ahora abarcan 1,4 millones de hectáreas (5.400 millas cuadradas).
+
+		Grupos internacionales y el gobierno chino han trabajado para salvar los pandas salvajes y reproducirlos a un coste enorme, provocando crí­ticas sobre que el dinero podrí­a emplearse mejor en salvar a otros animales en peligro de extinción. <br> <br>
+
+		¡ENVIA TUS DATOS PARA RECIBIR MÀS INFORMACIÓN SOBRE ESTOS HERMOSOS ANIMALES!
+	</p> <br>
+
+<form action="" onsubmit="return validarFormulario()" align="center">
+		<label for="nombre">
+			<span>Nombre:</span>
+		</label>
+		<input id="nombre" name="nombre" type="text"> <br> <br>
+
+
+ 
+		<label for="edad">
+			<span>Edad:</span>
+		</label>
+		<input id="edad" name="edad" type="text"> <br> <br>
+ 
+		<label for="correo">
+			<span>Correo electrónico:</span>
+		</label>
+		<input id="correo" name="correo" type="text"> <br> <br>
+		
+		<label for="fecha">
+			<span>Fecha favorita:</span>
+		</label>
+		<input id="fecha" name="fecha" type="date"> <br> <br>
+ 
+		<input type="submit" value="Submit" onclick="hola()">
+ 
+	</form>
+
+	<script src='js/form.js'></script>
+</body>
+</html>
