@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 6</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<h1 id="titulo">Lab 3. Tables...</h1>
+	<hr>
+
+	<section id="MarcaDeAgua">
+		<h2>Marca de agua</h2>
+		<div class="imagen">
+			<div class="caja">
+				<p id="texto">HOLA AURI</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="letras">
+		<h2>Evento en letras</h2>
+		<p id="eventoLetra" onclick="cambiaEstilo()">HAZ CLICK EN MI</p>
+	</section>
+
+	<section id="ayuda">
+			<form>
+				<label for="contraseña">Contraseña </label>
+				<input type="password" id="contraseña" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe cumplir con los parametros mencionados en Nota" required> <!--Required: para que si le da aceptar sn haberlo llenado no lo deje-->
+				<br>
+				<input type="submit" value="Aceptar" onclick="verificar()">
+				<br> <br>
+				<p><strong>Nota:</strong> La contraseña debe contener por lo menos: </p>
+				<p id="numero" class="mala"> Un número</p>
+				<p id="mayuscula" class="mala">Una letra mayuscula</p>
+				<p id="minuscula" class="mala">Una letra minuscula</p>
+				<p id="minCar" class="mala">Por lo menos 8 caracteres</p>
+		</form>
+	</section>
+
+	<section id="timer">
+		<h2>Funcion setTimeout</h2>
+		<button onclick="timer()">Presioname</button>
+		<p id="parrafo">Este texto apareció 3 segundos despues de haber presionado el botón</p>
+	</section>
+
+	<section id="dragDrop">
+		<h2>HTML5 Drag & Drop</h2>
+		<div class="cajaDos" ondrop="" ondragover=""></div>
+		<img src="imagenes/flores.jpg" alt="flores moradas" id="flores" draggable="true" ondragstart="">
+	</section>
+
+	<section id="preguntas">
+		<h2>Preguntas</h2>
+		<h3><strong>1. ¿Cuáles son las diferencias entre los posibles valores de la propiedad position?</strong> </h3>
+		<table id="t1" cellpadding="8" cellspacing="4">
+			<thead>
+				<tr>
+					<th class="t1">Valor</th>
+					<th class="t1">Descripción</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="t1">static;</td>
+					<td class="t1">Por defecto, se posiciona de acuerdo con el flujo normal de la página.</td>
+				</tr>
+				<tr>
+					<td class="t1">relative;</td>
+					<td class="t1">Lo posiciona relativo a su posiciòn normal. </td>
+				</tr>
+				<tr>
+					<td class="t1">absolute;</td>
+					<td class="t1">Se posiciona relativo al elemento màs cercano. </td>
+				</tr>
+				<tr>
+					<td class="t1">relative;</td>
+					<td class="t1">Lo posiciona relativo a su posiciòn normal. </td>
+				</tr>
+				<tr>
+					<td class="t1">fixed;</td>
+					<td class="t1">Se posiciona en una parte de la ventana y no se mueve a pesar de que se mueva arriba o abajo el mouse.
+				</td>
+				</tr>
+				<tr>
+					<td class="t1">sticky;</td>
+					<td class="t1">Se posiciona basado en la posición que escrolea el usuario. Siempre está visible en la pantalla. Si el usuario scrollea hacia arriba el elemento se va moviendo y al llegar arriba se queda aquí visible.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3><strong>2. ¿Cuáles son los valores estándar para la propiedad visibility?</strong> </h3>
+		<table id="t1" cellpadding="8" cellspacing="4">
+			<thead>
+				<tr>
+					<th class="t1">Valor</th>
+					<th class="t1">Descripción</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="t1">hidden;</td>
+					<td class="t1">	El elemento no es visible.</td>
+				</tr>
+				<tr>
+					<td class="t1">visible;</td>
+					<td class="t1">El elemento es visible. Es el valor por defecto.</td>
+				</tr>
+				<tr>
+					<td class="t1">collaps;</td>
+					<td class="t1">Sòlo se puede usar para elementos de tablas. Elimina una fila o columna sin afectar la forma de la tabla. </td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3><strong>3. ¿Qué es el zIndex y para qué sirve?</strong> </h3>
+		<p>Indica el z-order de un elemento y sus descendientes. Es decir cuando dos o más elementos se
+			 sobreponen el zIndex dice cual debe cubrir a cual. A cada elemento se le asigna un valor y entre
+			 mayor sea ese valor se le pone más arriba de entre los otros elementos.</p>
+
+		<h2>Referencias</h2>
+		<p>[1] https://www.w3schools.com/css/css_positioning.asp</p>
+		<p>[2] https://www.w3schools.com/cssref/pr_class_visibility.asp</p>
+		<p>[3] https://developer.mozilla.org/es/docs/Web/CSS/z-index</p>
+
+
+
+
+	</section>
+
+	<script type="text/javascript" src="js/index.js">
+
+	</script>
+	</body>
+</html>

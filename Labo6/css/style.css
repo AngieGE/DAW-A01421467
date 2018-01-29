@@ -1,0 +1,64 @@
+body{
+	width:80%;
+	margin:auto;
+	padding:20px;
+	background-color: white;
+}
+html{background: url("../imagenes/fondo.png");}
+table#t1, .t1{
+	text-align: center;
+	border: 2px solid black;
+	font-size: 15px;
+	font-family: monospace;
+}
+table{width: 60%;}
+#titulo{text-align: center; }
+div.imagen{
+	width:80%;
+	height:700px;
+	background:url(../imagenes/auri.jpeg);
+	background-position:center;
+	opacity:0.5;
+	z-index:1;
+}
+div.caja{
+	width: 100%;
+	height: 100%;
+	opacity:0.6;
+	z-index:2;
+}
+p#texto{
+	text-align: center;
+	font-size: 1200%;
+	color: red;
+	z-index:3;
+}
+p#eventoLetra{
+	font-size: 50px;
+	color: 	#89b677;
+}
+p#parrafo{
+	visibility: hidden;
+}
+div.cajaDos{
+		border: 2px solid black;
+		width: 50%;
+		height: 200px;
+}
+img#flores{
+	margin-top: 30px;
+}
+.buena{
+	color: green;
+	font-weight: bold;
+}
+/*
+#marcaAgua{
+	margin:10px auto;
+	display:block;
+	width: 70%;
+	height: 800px;
+	opacity:0.5;
+ 	z-index:99;
+	background-image: url(../imagenes/auri.jpeg);
+}
