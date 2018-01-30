@@ -46,8 +46,8 @@
 
 	<section id="dragDrop">
 		<h2>HTML5 Drag & Drop</h2>
-		<div class="cajaDos" ondrop="" ondragover=""></div>
-		<img src="imagenes/flores.jpg" alt="flores moradas" id="flores" draggable="true" ondragstart="">
+		<div class="cajaDos" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<img src="imagenes/flores.jpg" alt="flores moradas" id="flores" draggable="true" ondragstart="drag(event)">
 	</section>
 
 	<section id="preguntas">
