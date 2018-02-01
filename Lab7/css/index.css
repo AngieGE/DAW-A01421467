@@ -1,0 +1,14 @@
+#logo{
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+}
+#iChangeUser{width: 30px;}
+#iUser{ width: 40px;}
+#lastIcons{ margin-top: 10px;}
+#iEnter{ width: 100px; margin: auto; margin-top:10px;}
+h5.card-title{text-align: center; padding-top: 10px;}
+.container{
+  height: 200px;
+}
+#iUserUser, #iAct, #iLibro, #iReporte, #iBack{ width: 90px; margin: auto;}
