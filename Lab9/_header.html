@@ -4,9 +4,39 @@
     <meta charset="utf-8" />
     <title>Lab 9</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-    <header>
-        <p>HOLA, MUNDO</p>
+    <header class="p-3 mb-2 bg-secondary text-white">
+        <h1 class="text-center">Mi Laboratorio 9</h1>
     </header>
-    
+
+    <div class="container">
+    <h3 class="text-center"> <br>Problema 1</h3>
+    <h4>Recibe un arreglo (3 calificaciones) y regresa el promedio</h4>
+    <form name="form" action="" method="get">
+        <p>Ingresa 3 calificaciones</p>
+        Cal 1: <input type="number"  max="100" min="1" id="cal1" name="cal1"><br> <br>
+        Cal 2: <input type="number" max="100" min="1" id="cal2" name="cal2"><br> <br>
+        Cal 3: <input type="number"  max="100" min="1" id="cal3" name="cal3"><br> <br>
+        <input type="submit" value="Listo" id="boton" name="boton"> <br>
+        <?php echo calcularPromedio1(); ?>
+    </form>
+    </div>
+    <br><br>
+    <div class="container">
+        <h3 class="text-center"> <br> Problema 2</h3>
+        <h4>Recibe arreglo y regresa la mediana</h4>
+        <div>
+            <?php echo calcularMedia(); ?>
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        <h3 class="text-center"> <br> Problema 3</h3>
+        <h4>Una función que reciba un arreglo de números y muestre la lista de números, y como ítems de una lista html muestre el promedio, la media, y el arreglo ordenado de menor a mayor, y posteriormente de mayor a menor</h4>
+        <div>
+            <?php mostrarArreglo(); ?>
+        </div>
+    </div><br><br>
