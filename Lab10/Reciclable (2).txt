@@ -1,0 +1,36 @@
+﻿¿Que muestra la instrucción sp_help [nombre_tabla]?
+Muestra toda la información de una tabla como owner, fecha de la tabla creada, nombre de la tabla y más.
+
+
+
+
+Ejecuta las instrucciones que contiene el archivo crear.sql 
+
+
+¿Qué efecto tuvo esta acción?
+Crea los archivos que pusimos en crear.sql  
+
+
+¿Qué utilidad tiene esta manera de ejecutar los comandos de SQL?
+es más rápido y toda la creación de las tablas están juntas en un sólo archivo.
+
+
+¿Qué relación tienen los archivos excell con las tablas de la base de datos? (checa su contenido) 
+Es el mismo
+
+
+¿Qué relación tiene el contenido de este archivo (materiales.sql) con el formato en que se encuentran los datos en el archivo materiales.csv?
+Es el mismo. Los datos del .csv se exportaron al .sql
+
+
+Ejecuta los comandos definidos en el archivo materiales.sql.
+
+
+Después de la ejecución del comando, vuelve a revisar el contenido de la tabla materiales mediante el uso de una consulta. 
+
+
+SELECT  * FROM Materiales
+
+
+¿Qué sucedió?
+Me muestra toda la tabla. Todos los campos y los datos de estos.
