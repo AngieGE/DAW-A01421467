@@ -1,0 +1,77 @@
+﻿Laboratorio 12: Creación de Constraints Para Instrumentar Integridad Referencial en SQL Server
+
+
+Angélica Güemes Estrada
+A01421467
+
+
+Revisa el contenido de la tabla materiales y determina si existe alguna inconsistencia en el contenido de la tabla. ¿Cuál es? ¿A qué se debe? 
+El ultimo ID es igual al primero, lo cual esta mal ya que al ser llave primaria debería garantizar la unicidad de cada fila. El error está en que aun no la hemos definido como llave primaria es por eso que se permitía la ejecución.
+
+
+
+
+¿Qué ocurrió? 
+Al definir el campo Clave como llave primaria y querer insertar unos datos con clave 1000 (que ya existía anteriormente) no nos lo permite ya que no se puede repetir.
+
+
+¿Qué información muestra esta consulta? 
+  sp_helpconstraint materiales 
+  
+
+
+
+¿Qué sentencias utilizaste para definir las llaves primarias? 
+ALTER TABLE Proveedores add constraint llaveProveedores PRIMARY KEY (RFC)
+ALTER TABLE Proyectos add constraint llaveProyectos PRIMARY KEY (Numero)
+
+
+Define el constraint correspondiente a la llave primaria para la tabla entregan, considerando que en este caso, la llave primaria está integrada por varias columnas. 
+¿Qué sentencias utilizaste para definir este constrait? 
+ALTER TABLE Entregan add constraint llaveEntregan PRIMARY KEY (Clave, RFC, Fecha)
+
+
+Intenta insertar en la tabla entregan el siguiente registro: 
+  INSERT INTO entregan values (0, 'xxx', 0, '1-jan-02', 0) ; 
+¿Qué particularidad observas en los valores para clave, rfc y numero? 
+La clave es 0 cuando en la tabla las otras claves tienen valores dentro del rango [1000, 1430] La clave hace referencia a la clave de los materiales y en esa tabla no existe ningún insumo con clave 0. 
+En RFC insertamos ‘xxx’ y a pesar de no ser un RFC nos lo aceptaron. y la fecha esta en un formato distinto al de la tabla, insertamos un dmy y la tabla maneja ymd.
+
+
+¿Cómo responde el sistema a la inserción de este registro? 
+No marco ningún error. Nos permitió hacer la acción e incluso la fecha la paso al formato que tienen todos los otros datos en el campo fecha.
+
+
+  ALTER TABLE entregan add constraint cfentreganclave 
+  foreign key (clave) references materiales(clave); 
+Intenta nuevamente la inserción del registro inconsistente. 
+¿Qué significa el mensaje que emite el sistema? 
+¿Qué significado tiene la sentencia anterior? 
+ The INSERT statement conflicted with the FOREIGN KEY constraint "cfentreganclave". The conflict occurred in database "a1421467", table "a1421467.Materiales", column 'Clave'.
+Entró en conflicto con la llave foranea
+Supongo que se produjo el error ya que la inserción no existe en materiales. 
+
+
+  sp_helpconstraint tableName 
+¿Qué significan las columnas de esas consultas?
+Nos muestra todas las llaves que tiene esa tabla y especifica que tipo de  llaves son.
+
+
+  INSERT INTO entregan values (1000, 'AAAA800101', 5000, GETDATE(), 0); 
+Lista el registro que acabas de crear. 
+¿Qué uso se le está dando a GETDATE()? 
+Esta abstrayendo del servidor la fecha de hoy
+¿Tiene sentido el valor del campo de cantidad? 
+no se ha hecho ninguna entrega
+
+
+Intenta insertar un registro con cantidad igual o menor que 0. 
+¿Cómo responde el sistema? 
+No nos permite hacer la inserción
+¿Qué significa el mensaje? 
+Nos dice que crea un conflicto con el check que acabamos de escribir.
+Mensaje -> The INSERT statement conflicted with the CHECK constraint "cantidad"
+
+
+Integridad Referencial
+Es una propiedad de la base de datos. Es una especie de regras que usan los SGBD  (En BD relacionales) para garantizar que no haya errores de tipo referencial. Un ejemplo de ese error es que en la tabla entregan tenga un RFC que no existe en la tabla proveedor.
