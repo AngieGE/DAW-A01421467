@@ -1,1 +1,38 @@
-Aqui pego el cuestionario
+<div class="container">
+  <div>
+  		<p class="text-center"><h3>1. ¿Por qué es importante hacer un session_unset() y luego un session_destroy()?</h3></p>
+  		<p class="text-justigy">session_unset libera todas las variables de sesión actualmente registradas. Es importante
+         porque cuando se va a cambiar o cerrar de sesión se deben eliminar las preferencias y archivos de ese usuario para
+         que el siguiente usuario que llegue pueda actualizarlas con sus datos. <br>
+         session_destroy es como el closing tag de session_start. cuando destruye toda la información relacionada con
+         el $_SESSION.
+</p>
+  </div>
+  <div>
+      <p class="text-center"><h3>2. ¿Cuál es la diferencia entre una variable de sesión y una cookie?
+</h3></p>
+      <p class="text-justigy">Lo que se almacena en session se pierde al momento de salir y volver a entrar. En cambio,
+        si tienes cookies lo que se guarda en ellas permanece almacenado aun cuando vuelvas a entrar.</p>
+  </div>
+  <div>
+      <p class="text-center"><h3>3. ¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba
+         sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?</h3></p>
+      <p class="text-justigy">Cuando subimos una foto se le asigna un nombre, distinto al que nosotros ponemos. De
+        ese modo nunca se repiten sus nombres. Un ejemplo sería agregar agregar un tiemestamp al final del nombre, eso
+        garantiza su unicidad.</p>
+  </div>
+  <div>
+      <p class="text-center"><h3>4. ¿Qué es CSRF y cómo puede prevenirse?</h3></p>
+      <p class="text-justigy">Cross Site Request Forgery, o falsificación de petición en sitios cruzados. “Este ataque
+        fuerza al navegador web de su víctima, validado en algún servicio (como por ejemplo correo o home banking) a enviar
+        una petición a una aplicación web vulnerable.” [3]</p>
+  </div>
+  <div>
+      <p class="text-center"><h3>Fuentes</h3></p>
+      <p class="text-left">
+        [1] http://php.net/manual/es/function.session-destroy.php <br>
+        [2] http://php.net/manual/es/function.session-unset.php <br>
+        [3] https://www.welivesecurity.com/la-es/2015/04/21/vulnerabilidad-cross-site-request-forgery-csrf/ <br>
+      </p>
+  </div>
+</div>
