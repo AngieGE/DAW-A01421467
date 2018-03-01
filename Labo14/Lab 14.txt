@@ -1,0 +1,16 @@
+﻿Lab 14: php y consultas dinámicas a la base de datos
+* ¿Qué es ODBC y para qué es útil?
+* En la vida real si escribimos una BD en Access y después la queremos pasar a SQL sin cambiar nada no va a servir. Ahora, la mayoría de los SGBD cuentan con un ODBC. 
+* Open Data Base Connectivity es un estándar de acceso a bases de datos que utilizan los sistemas Microsoft
+* * ¿Qué es SQL Injection?
+* Las consultas sql no siempre son confiables, si se usan de forma maliciosa pueden permitir eludir controles de acceso.  Con la inyección SQL un usuario inyecta una consulta dentro de un campo de entrada de una página web. y al momento en que se procesa el input se toma como código alterando la consulta.
+* * ¿Qué técnicas puedes utilizar para evitar ataques de SQL Injection?
+* Aumentar la seguridad del sitio.  El sitio PHP tiene una lista de recomendaciones para evitar estos ataque. Se muestra a continuacion.
+* Nunca se conecte como superusuario o como propietario de la base de datos. Siempre utilice usuarios personalizados con privilegios muy limitados.
+* 1) Emplee sentencias preparadas con variables vinculadas. Son proporcionadas por PDO, MySQLi y otras bibliotecas.
+* 2) Compruebe si la entrada proporcionada tiene el tipo de datos previsto. PHP tiene un amplio rango de funciones para validar la entrada de datos, desde las más simples, encontradas en Funciones de variables y en Funciones del tipo carácter (p.ej., is_numeric(), ctype_digit() respectivamente), hasta el soporte paraExpresiones regulares compatibles con Perl.
+* 3) Si la expresión espera una entrada numérica, considere verificar los datos con la función ctype_digit(), o silenciosamente cambie su tipo utilizando settype(), o emplee su representación numérica por medio de sprintf().
+* Fuentes
+[1] https://www.uv.es/jac/guia/gestion/gestion3.htm
+[2] https://desarrolloweb.com/faq/que-es-odbc.html
+[3] http://php.net/manual/es/security.database.sql-injection.php
