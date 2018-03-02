@@ -12,7 +12,7 @@ function conectDb(){
 	if (!$con) {
 		die("Conection failed " . mysqli_connect_error());
 	}
-
+	$con->set_charset("utf8");
 	return $con;
 }
 
@@ -22,36 +22,51 @@ function closeDb($mysql){
 }
 
 //Funcion para obtener todos los objetos de una base de datos
-function getFruits(){
+function getFruits($fruit_name=""){
 	$conn = conectDb();
 
 	$sql = "SELECT name , units, quantity, price, country
 					FROM Fruit";
 
-	$result = mysqli_query($conn, $sql);
+	if ($fruit_name != "") {
+		$sql .= " WHERE name LIKE '%".$fruit_name."%'";
 
-	closeDb($conn);
-
-	return $result;
-}
-
-//Funcion para consulta 1
-function getFruitsByName($fruit_name){
-	$conn = conectDb();
-
-	$sql = "SELECT name, units, quantity, price, country
-					FROM Fruit
-					WHERE name LIKE '%".$fruit_name."%'";
+	}
 
 	$result = mysqli_query($conn, $sql);
 
-	closeDb($conn);
+	$html = "";
 
-	return $result;
+  if ( mysqli_num_rows($result) > 0) {
+    //Imprimo la info
+    $html .= ' <br> <br> <br>
+    <h1 class="text-center">Table Fruits</h1>
+    <table border="1" cellspacing=“4” cellpadding=“2” width="300px" align="center">
+      <tr>
+        <th>Name</th>
+        <th>Units</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Country</th>
+      </tr>';
+    while ($row = mysqli_fetch_assoc($result)) {
+      $html .= '
+        <tr border="1" cellspacing=“4” cellpadding=“2” width="300px" align="center">
+          <td>'. $row["name"].'</td>
+          <td>'. $row["units"].'</td>
+          <td>'. $row["quantity"].'</td>
+          <td>'. $row["price"].'</td>
+          <td>'. $row["country"].'</td>
+        </tr>';
+    }
+		//echo '</table> <br> <br> <br>';
+  }
+
+	return $html;
 }
 
 //Funcion para consulta 2
-function getCheapestFruits($cheap_price){
+function getCheapOrExpensiveFruits($cheap_price){
 	$conn = conectDb();
 	$sql = "SELECT name, units, quantity, price, country
 					FROM Fruit
