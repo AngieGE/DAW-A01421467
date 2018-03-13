@@ -1,0 +1,21 @@
+Lab 11: Manejo de formas con php y modelo de capas
+* ¿Por qué es una buena práctica separar el controlador de la vista?.
+* Porque la vista se puede ver desde el navegador o cual lo hace más vulnerable.
+* * Aparte de los arreglos $_POST y $_GET, ¿qué otros arreglos están predefinidos en php y cuál es su función?
+* $GLOBAL Contiene las variables globales
+* $_ENV se usa para regresar las variables del ambiente del servidor.
+* $_SESSION se usa para pasar variables. Sólo se necesita iniciar sesión [session_start()] Así todas las variables que se guarden en $_SESSION pueden ser accesadas desde cualquier parte del servidor.
+* $_COOKIE Contiene variables pasadas al script actual a través de cookies.
+* * * Explora las funciones de php, y describe 2 que no hayas visto en otro lenguaje y que llamen tu atención.
+* mysql_connect — Abre una conexión al servidor MySQL
+* mysql_info — Obtiene información sobre la consulta más reciente
+* mysql_stat — Obtiene el estado actual del sistema
+* ¿Qué es XSS y cómo se puede prevenir?
+* Son un tipo de ataques por inyección, inyectan un script maliciosa través de una aplicación web.
+
+Referencias
+1) http://php.net/manual/es/function.get-extension-funcs.php
+2) http://php.net/manual/es/functions.internal.php
+3) http://php.net/manual/es/function.mysql-stat.php
+4) https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
+5) https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet
