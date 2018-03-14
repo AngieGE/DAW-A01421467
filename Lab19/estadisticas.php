@@ -29,14 +29,14 @@
     </div>
   </div>
   <!--Formulario-->
-    <form class="" method="POST" action="index.html" >
+    <form class="" method="POST" action="index.html">
     <div class="row">
       <!--Grado estudios-->
       <div class='col-sm-4'>
           <div class='form-group'>
             <label class="mr-3 col-lg-5" for="credential_schooling">Escolaridad:</label>
             <div class="col-md-12">
-            <select name="stat[user_grade]" class="form-control cvalidate cschooling" id="userInput" onkeyup="showUser(this.value)">
+            <select name="stat[user_grade]" class="form-control cvalidate cschooling" id="userInput" onChange="showUser(this.value)">
                   <option value="" disabled selected>-- Escolaridad --</option>
                   <option value="1">Ninguno</option>
                   <option value="2">Preescolar</option>
@@ -56,7 +56,7 @@
           <div class='form-group'>
               <label for="user_ocupation">Edad:</label>
               <div class="col-md-12">
-                  <input  class="form-control cvalidate cnumber" id="" name="stat[age]" type="number" min="1" max="100" />
+                  <input  class="form-control cvalidate cnumber" id="userInput" name="stat[age]" type="number" min="1" max="120" onChange="showUser(this.value)"/>
               </div>
           </div>
       </div>
@@ -132,15 +132,8 @@
         <div class="shadow">
           <div class="table-responsive" id="stats-table">
             <div id="txtHint"><b>Person info will be listed here.</b></div>
-            <div id="ajaxResponse"><b>Person info will be listed here.</b></div>
           </div>
         </div>
-      </div>
-      <div class="col-md-5">
-        <br>
-        <div class="text-center">
-            <!--Aqui va la Grafica -->
-        </div>  <!--Grafica-->
       </div>
     </div>
     <br><br>
@@ -153,7 +146,7 @@
       <div class='col-sm-4'>
           <div class='form-group'>
               <div class="text-center">
-                  <input type="submit" name="actionTypeEntry" id="mostrarEstadisticas" class="btn btn-secondary mx-auto csearch" value="Mostrar Estadísticas" oncklick="showUser()">
+                <!--  <input type="submit" name="actionTypeEntry" id="mostrarEstadisticas" class="btn btn-secondary mx-auto csearch" value="Mostrar Estadísticas" oncklick="showUser()">  -->
               </div>
           </div>
       </div>
