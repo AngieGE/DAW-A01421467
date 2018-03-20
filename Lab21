@@ -1,0 +1,200 @@
+Laboratorio 21: Manipulación de datos usando Stored Procedures
+
+
+Copia la siguiente sentencia en SQL Server Management Studo
+           IF EXISTS (SELECT name FROM sysobjects 
+                       WHERE name = 'creaMaterial' AND type = 'P')
+                DROP PROCEDURE creaMaterial
+            GO
+            
+            CREATE PROCEDURE creaMaterial
+                @uclave NUMERIC(5,0),
+                @udescripcion VARCHAR(50),
+                @ucosto NUMERIC(8,2),
+                @uimpuesto NUMERIC(6,2)
+            AS
+                INSERT INTO Materiales VALUES(@uclave, @udescripcion, @ucosto, @uimpuesto)
+            GO
+
+
+¿Qué hace el primer bloque del código (bloque del IF)?
+Primero realiza la consulta:
+SELECT name FROM sysobjects 
+WHERE name = 'creaMaterial' AND type = 'P'
+La cual checa si existe el procedure y si sí, le hace DROP.  
+
+
+¿Para qué sirve la instrucción GO? 
+Las utilidades de SQL Server interpretan GO como una señal de que deben enviar el lote actual de instrucciones Transact-SQL a una instancia de SQL Server. (Microsoft-docs). El comando GO permite que se ejecute el bloque anterior. También puede recibir parámetros numéricos. Por ejemplo, GO 2, ejecutaría dos veces el bloque anterior. 
+
+¿Explica que recibe como parámetro este Procedimiento y qué tabla modifica?
+Modifica la tabla Materiales. Y recibe cuatro parámetros:
+   @uclave NUMERIC(5,0),		un número como la clave.
+   @udescripcion VARCHAR(50),	Una descripción de 50 caracteres.
+   @ucosto NUMERIC(8,2),		El costo. Flotante con 2 decimales.
+   @uimpuesto NUMERIC(6,2)		Flotante con 2 decimales. El impuesto.
+
+Para ejecutar el stored procedure, se utiliza la sintaxis mostrada en el siguiente ejemplo: 
+
+EXECUTE creaMaterial 5000,'Martillos Acme',250,15 
+
+Por analogía crea procedimientos almacenados con los siguientes objetivos: 
+
+> modificaMaterial que permite modificar un material que reciba como parámetros las columnas de la tabla materiales y actualice las columnas correspondientes con los valores recibidos, para el registro cuya llave sea la clave que se recibe como parámetro. 
+
+            CREATE PROCEDURE modificaMaterial
+                @uclave NUMERIC(5),
+                @udescripcion VARCHAR(50),
+                @ucosto NUMERIC(8,2),
+                @uimpuesto NUMERIC(6,2)
+            AS
+		ALTER TABLE Material	
+		SET descripcion = @udescripcion	
+		      costo = @ucosto
+		      impuesto = @uimpuesto
+		WHERE clave = @uclave
+            GO
+
+
+> eliminaMaterial que elimina el registro de la tabla materiales cuya llave sea la clave que se recibe como parámetro. 
+            CREATE PROCEDURE eliminaMaterial
+                @uclave NUMERIC(5),
+            AS
+		DELETE *
+FROM Material	
+		WHERE clave = @uclave
+            GO
+
+
+> Desarrollar los procedimientos (almacenados) creaProyecto , modificaproyecto y eliminaproyecto, hacer lo mismo para las tablas proveedores y entregan.
+
+PROOVEDORES
+	CREAR
+            CREATE PROCEDURE creaProveedor
+                @urfc VARCHAR(10),
+                @udenominacion CHAR(50),
+            AS
+                INSERT INTO proveedores VALUES(@urfc, @udenominacion)
+            GO
+
+MODIFICA
+
+            CREATE PROCEDURE modificaProveedor
+                @urfc VARCHAR(10),
+                @udenominacion CHAR(50),
+            AS
+		ALTER TABLE proveedores	
+		SET denominacion = @udenominacion	
+		WHERE rfc = @urfc
+            GO
+
+ELIMINA
+
+            CREATE PROCEDURE eliminaProveedor
+                  @urfc VARCHAR(10)
+            AS
+		DELETE *
+FROM proveedores	
+		WHERE rfc = @urfc
+            GO
+
+
+ENTREGAN
+
+	CREAR
+            CREATE PROCEDURE creaEntregan
+                @uclave NUMERIC(5),
+       @urfc VARCHAR(10),
+                @unumero NUMERIC (5),
+                @ufecha DATETIME,
+                @ucantidad NUMERIC(8,2)
+            AS
+                INSERT INTO entregan VALUES(@uclave, @urfc, @unumero, @ufecha, @ucantidad )
+            GO
+
+MODIFICA
+
+            CREATE PROCEDURE modificaEntregan
+                @uclave NUMERIC(5),
+                @urfc VARCHAR(10),
+                @unumero NUMERIC (5),
+                @ufecha DATETIME,
+                @ucantidad NUMERIC(8,2)
+            AS
+		ALTER TABLE entregan	
+		SET cantidad = @ucantidad
+		WHERE clave = @uclave
+AND numero = @unumero
+AND ufecha = @ufecha
+	AND urfc = @urfc
+GO
+
+ELIMINA
+
+            CREATE PROCEDURE eliminaEntrega
+                @uclave NUMERIC(5),
+                @urfc VARCHAR(10),
+                @unumero NUMERIC (5),
+                @ufecha DATETIME,
+            AS
+		DELETE *
+FROM Material	
+		WHERE clave = @uclave
+AND numero = @unumero
+AND ufecha = @ufecha
+	AND urfc = @urfc
+   GO
+
+
+Define el siguiente store procedure en tu base de datos: 
+                           IF EXISTS (SELECT name FROM sysobjects 
+                                       WHERE name = 'queryMaterial' AND type = 'P')
+                                DROP PROCEDURE queryMaterial
+                            GO
+                            
+                            CREATE PROCEDURE queryMaterial
+                                @udescripcion VARCHAR(50),
+                                @ucosto NUMERIC(8,2)
+                            
+                            AS
+                                SELECT * FROM Materiales WHERE descripcion 
+                                LIKE '%'+@udescripcion+'%' AND costo > @ucosto 
+                            GO
+                           
+Ejecútalo con la siguiente instrucción 
+
+EXECUTE queryMaterial 'Lad',20 
+
+Explica en tu reporte qué recibe como parámetro este Procedimiento y qué hace
+Recibe dos parámetros de entrada. un varchar(50) y un Numeric de hasta dos decimales. Lo que haces es mostrar todo de la tabla materiales donde la descripción sea similar al primer parámetro de entrada y en costo sea mayor al segundo parámetro de entrada.
+
+Contesta en tu reporte las siguientes preguntas de reflexión: 
+¿Qué ventajas tienen el utilizar Store Procedures en una aplicación cliente-servidor? 
+Utilizar un procedimiento almacenado puede dar como resultado un uso reducido de la red y un mejor rendimiento general.
+Al incluir privilegios de base de datos con procedimientos almacenados que utilicen SQL estático, el administrador de bases de datos (DBA) puede mejorar la seguridad.
+Al gestionar la lógica compartida en un lugar del servidor, puede simplificarse la seguridad, la administración y el mantenimiento.
+ 
+¿Qué ventajas tiene utilizar SP en un proyecto?
+Al volver a utilizar un procedimiento común, un procedimiento almacenado puede proporcionar una manera enormemente eficaz de resolver estas situaciones repetitivas.
+Permite que el experto en SQL pueda trabajar en únicamente consultas, delega de mejor forma los trabajos.
+
+
+
+
+Fuentes extras
+[1]  https://docs.microsoft.com/es-es/sql/t-sql/language-elements/sql-server-utilities- statements-go
+[2] https://www.ibm.com/support/knowledgecenter/es/SSEPGG_8.2.0/com.ibm.db2. udb.dc.doc/dc/c_spbenefits.htm
+
+drop procedure id exists pInsertarPrestamo;
+create procedure pInsertarPrestamo(
+	in pidEjemplar int(11).
+	in pidCredencial int(11),
+	in pfechaPrestamo DATETIME,
+	in pfechaDevolucion DATETIME,
+	in pfechaDevolucionReal DATETIME
+)
+begin
+	insert into ejemplar_credencial (idCredencial, idEjemplar, fechaPrestamo, fechaDevolucion, fechaDevolucionreal)
+	values(pidCredencial,pfechaPrestamo,  pfechaDevolucion, pfechaDevolucionReal)
+end
+
