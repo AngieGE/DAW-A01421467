@@ -1,0 +1,86 @@
+<br /><br />
+<div class="container shadow">
+    <div class="row">
+        <div class="col-sm-12">
+                <div class="text-center">
+                    <div class="display-4"> Proyectos</div>
+                    <br>
+                    <span class="warning cnullalert">Debes llenar todos los campos</span>
+                </div>
+        </div>
+    </div>
+    <form class="" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> <!-- action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
+
+     <!--   <div class="row">
+
+                <div class="col-sm-12 col-md-4 offset-md-5">
+                    <div class='form-group'>
+                        <label for="proyecto_number">Número de Proyecto:</label>
+                        <div class="col-md-6">
+                            <input  class="form-control cvalidate cnumber" id="proyecto_number" name="proyecto[number]" size="30" type="number" placeholder="1234567"/>
+                        </div>
+                    </div>
+                </div>
+        </div>-->
+        <div class='row'>
+
+          <!--  <div class='col-sm-4 offset-md-2'>
+                <div class='form-group'>
+                    <label for="proyecto_name">Nombre:</label>
+                    <div class="col-md-12">
+                        <input  class="form-control cvalidate cname" id="proyecto_name" name="proyecto[name]" size="30" type="text" placeholder="Sitio Web Zara"/>
+                    </div>
+                </div>
+            </div>-->
+
+            <div class='col-sm-12 col-md-6 offset-md-4'>
+                <div class='form-group'>
+                    <label for="proyecto_descripcion"> Entrada:</label>
+                    <div class="col-md-12">
+                        <input required class="form-control cvalidate cname" id="proyecto_descripcion" name="proyecto[descripcion]" size="300" type="text" placeholder="4 8 15 16 21 42"/>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="col-md-12">
+                    <a class="btn btn-secondary py-0" href="index.php"><i class="material-icons align-middle">arrow_back</i></a>
+                    <!--  <button type="submit" class="btn btn-outline-secondary mx-auto">Iniciar Sesión</button>-->
+                    </div>
+                </div>
+            </div>
+
+        <!-- <div class="col-sm-3" id="warpEditButton">
+             
+            </div>-->
+            <div class="col-sm-3">
+            </div>
+
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <button id="registrarProyecto" type="submit" class="btn btn-secondary mx-auto chinsert" value="Registrar proyecto">Registrar Proyecto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <br><br><br>
+    <div class='row'>
+        <div id="proyecto_empleados_table" class='col-12'>
+           
+        </div>
+    </div> 
+    <br><br><br>
+    <div class='row'>
+        <div id="proyecto_table" class='col-12'>
+            <!--Aqui habrá una tabla con todos los proyectos-->
+        </div>
+    </div>
+
+<!--<script src="js/dynamicqueries_viewInfo_proyectos.js"></script>
+<script src="js/proyectos.js"></script>-->
