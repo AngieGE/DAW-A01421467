@@ -14,7 +14,7 @@ for(var i=0;i<piezas.length;i++){
 	piezas[i].setAttribute("onmousedown","seleccionarElemento(evt)");
 }
 //variables que van alamecenar informacion de movimiento
-var elementSelect = 0;  
+var elementSelect = 0;
 var currentX = 0;
 var currentY = 0;
 var currentPosX = 0;
@@ -22,9 +22,9 @@ var currentPosY = 0;
 
 function seleccionarElemento(evt) {
 	elementSelect = reordenar(evt);//parametro, el evento seleccionado
-	currentX = evt.clientX;   //guardar posicion del mouse , cuando se produjo el click     
+	currentX = evt.clientX;   //guardar posicion del mouse , cuando se produjo el click
 	currentY = evt.clientY;
-	currentPosx = parseFloat(elementSelect.getAttribute("x"));   //obtenemos la posicion x y y de la pieza  
+	currentPosx = parseFloat(elementSelect.getAttribute("x"));   //obtenemos la posicion x y y de la pieza
 	currentPosy = parseFloat(elementSelect.getAttribute("y")); //obtenemos la posicion x y y de la pieza
 	elementSelect.setAttribute("onmousemove","moverElemento(evt)"); //va a llmar a la funcion mover elemento
 }
@@ -38,8 +38,8 @@ function moverElemento(evt){
 	//actualizamos la posicion del elemento
 	elementSelect.setAttribute("x",currentPosx);
 	elementSelect.setAttribute("y",currentPosy);
-	//guardamos nuevamente posicion del mouse 
-	currentX = evt.clientX;        
+	//guardamos nuevamente posicion del mouse
+	currentX = evt.clientX;
 	currentY = evt.clientY;
 	//para deselecionar elemento
 	elementSelect.setAttribute("onmouseout","deseleccionarElemento(evt)");
@@ -50,7 +50,7 @@ function moverElemento(evt){
 function deseleccionarElemento(evt){
 	testing();
 	//elimamos los atributos de seleccionar elemnto
-	if(elementSelect != 0){			
+	if(elementSelect != 0){
 		elementSelect.removeAttribute("onmousemove");
 		elementSelect.removeAttribute("onmouseout");
 		elementSelect.removeAttribute("onmouseup");
@@ -87,10 +87,10 @@ function iman(){
 var win = document.getElementById("win");
 
 function testing() {
-	var bien_ubicada = 0; //contador 
+	var bien_ubicada = 0; //contador
 	var padres = document.getElementsByClassName('padre');
 	for(var i=0;i<piezas.length;i++){
-		var posx = parseFloat(padres[i].firstChild.getAttribute("x"));    
+		var posx = parseFloat(padres[i].firstChild.getAttribute("x"));
 		var posy = parseFloat(padres[i].firstChild.getAttribute("y"));
 		ide = padres[i].getAttribute("id");
 		if(origX[ide] == posx && origY[ide] == posy){
@@ -101,4 +101,3 @@ function testing() {
 		alert('good job');
 	}
 }
-
