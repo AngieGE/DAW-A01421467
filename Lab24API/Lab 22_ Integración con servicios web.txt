@@ -1,0 +1,21 @@
+﻿Lab 22: Integración con servicios web
+¿Qué ventajas y desventajas tiene la integración de tus aplicaciones web con servicios web desarrollados por terceros?
+
+
+Ventajas
+1.- Rapidez. Con pocas líneas de código puedes agregar funcionalidades muy complejas a tu aplicación.
+2.- Fácil. No es complejo o complicado usar APIs, sería más tardado crear la funcionalidad desde cero.
+3.- Mantenimiento. Los servicios adquiridos a través de APIs, suelen tener constantes mejoras.
+
+
+Desventajas
+1.- Libertad. Al utilizar una plataforma externa estaremos sujetos a numerosas políticas que pueden limitar nuestro control sobre nuestra propia tienda online.
+2.- No se puede hacer nada en caso de falla. Por ejemplo si tenemos un sitio que acepta unicamente pagos por paypal y deja de funcionar, no hay nada que podamos hacer.
+3.- Parte de la percepcion de nuestro sitio es la persepcion que tienen la otra marca. asi que si su prestigio se ve dañado nos afecta a nosotros.
+
+
+
+
+Fuentes:
+https://www.genbetadev.com/programacion-en-la-nube/pros-y-contras-del-uso-de-apis-de-terceros
+http://www.4rsoluciones.com/blog/servicio-terceros-vs-sitio-web-propio-la-mejor-opcion-nuestra-tienda-online/
